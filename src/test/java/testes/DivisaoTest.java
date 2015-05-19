@@ -19,25 +19,25 @@ import org.junit.Test;
  * @author Pris
  */
 public class DivisaoTest {
-    private Calculadora calculadora  = new Calculadora();
+    private Calculadora calc  = new Calculadora();
     
     @Test(expected = CalculadoraException.class)
     public void testaDivisaoPorZero(){
-        assertFalse("divisão por zero",5==calculadora.dividir(5,0));
+        assertFalse("divisão por zero",5==calc.dividir(5,0));
     }
     
     @Test
     public void testaDivisaoValoresPositivos(){
-        assertTrue("divisão valores positivos", 2==calculadora.dividir(4,2));
-        assertTrue("divisão valores positivos", 0==calculadora.dividir(0,2));
-        assertTrue("divisão valores positivos", 2==calculadora.dividir(5,2));
-        assertTrue("divisão valores positivos", 5 == calculadora.dividir(5,1));
+        assertTrue("divisão valores positivos", 2==calc.dividir(4,2));
+        assertTrue("divisão valores positivos", 0==calc.dividir(0,2));
+        assertTrue("divisão valores positivos", 2==calc.dividir(5,2));
+        assertTrue("divisão valores positivos", 5 == calc.dividir(5,1));
     }
     
     @Test
     public void testaDivisaoValoresNegativos(){
-        assertTrue("divisão valores negativos", -5==calculadora.dividir(5, -1));
-        assertTrue("divisão valores negativos", -2==calculadora.dividir(4, -2));
+        assertTrue("divisão valores negativos", -5==calc.dividir(5, -1));
+        assertTrue("divisão valores negativos", -2==calc.dividir(4, -2));
     }
     
     
